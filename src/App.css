@@ -8,6 +8,7 @@
 .list-item {
   display: flex !important;
   justify-content: space-around !important;
+  font-weight: 500;
 }
 .list-item:hover {
   color: tomato !important;

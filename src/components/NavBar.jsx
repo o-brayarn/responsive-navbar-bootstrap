@@ -30,12 +30,18 @@ export default function NavBar() {
         }
     ]
   return (
-    <Navbar className="navbar" expand="lg">
+      <Navbar className="navbar" variant='light' expand="lg">
       <Container>
-        <Navbar.Brand className="brand" href="#home">Logo</Navbar.Brand>
+              <Navbar.Brand className="brand" href="#home">
+                  <img
+        src="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+        alt="logo"
+        height="80"
+                  />
+                  bad-code</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto flex-grow-1 justify-content-evenly">
+          <Nav className="ms-auto gap-5 px-3">
            { menuData.map((item)=>(
                <NavLink to={item.path} key={item.name} >
                    <div className="list-item">{item.name}</div>
@@ -43,7 +49,6 @@ export default function NavBar() {
            ))
             }
                   </Nav>
-                  {/* <Nav className='me-auto'></Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
